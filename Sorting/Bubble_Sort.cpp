@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
+//Driver Code !!
 void Bubble_Sort(int array[] , int n) {
     for(int i=0 ; i<n-1 ; i++) {
 
@@ -18,7 +18,7 @@ void Bubble_Sort(int array[] , int n) {
     }
 }
 
-
+//sorted Array Print !!!
 void print(int array[] , int n) {
     for(int i=0 ; i<n ; i++) {
         cout << array[i] << " ";
@@ -28,8 +28,7 @@ void print(int array[] , int n) {
 
 
 int main() {
-    int n;
-    cin >> n;
+    int n;cin >> n;
 
     int array[n];
     for(auto &a : array) cin >> a;
@@ -38,5 +37,7 @@ int main() {
 
     cout << "Sorted Array : \n";
     print(array , n);
+
+
     return 0;
 }
