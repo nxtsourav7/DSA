@@ -23,9 +23,7 @@ int main() {
         cout << "Found !\n";
         cout << "Position : " << ans+1 << '\n';
     }
-    else {
-        cout << "Not Found !\n";
-    }
+    else cout << "Not Found !\n";
 
     return 0;
 }
