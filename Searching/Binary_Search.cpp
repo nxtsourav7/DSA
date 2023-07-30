@@ -23,7 +23,7 @@ int main() {
     int array[n];
     for(auto &a : array) cin >> a;
 
-    cout << "Enter Searching Element : ";
+    // cout << "Enter Searching Element : ";
     int x;cin >> x;
 
     int ans = Binary_Search(array , n , x);
