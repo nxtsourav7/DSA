@@ -1,0 +1,7 @@
+#config and debug setup in vs code !
+.vscode
+
+#input output file
+
+*.txt
+
