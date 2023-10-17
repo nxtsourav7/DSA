@@ -1,6 +1,6 @@
 /*
 *	author 	: nxtsourav7
-*	problem : Intersection Set
+*	problem : Union Set
 *	created : 2023-09-21 09:27:40
 */
 #include<bits/stdc++.h>
@@ -27,20 +27,29 @@ int main(void) {
         cin >> x;
     }
 
-	// Intersection between set A & B
-	int ans[min(m,n)];//minimum Array Size
-	int pos = 0;
-    for(int i=0 ; i<m ; ++i) {
-        for(int j=0 ; j<n ; ++j) {
-            if(A[i]==B[j]) {
-                ans[pos] = A[i];
-                pos++;
-            }
-        }
-    }
+	// Union between set A & B
+	int ans[m+n];
+	for(int i=0 ; i<m ; ++i) ans[i] = A[i];
+	int pos = m;
+	for(int i=0 ; i<n ; ++i) {
+		bool flag = false;
+		
+		for(int j=0 ; j<m ; ++j) {
+			if(B[i] == A[j]) {
+				flag = true;
+				break;
+			}
+		}
+		
+		if(!flag) {
+			ans[pos] = B[i];
+			pos ++;
+		}
+	}
+    
 
 	// Print Set
-	cout << "\nIntersection Set : [ ";
+	cout << "\nUnion Set : [ ";
 	for(int i=0 ; i<pos ; ++i) {
 		cout << ans[i] << " ";
 	}

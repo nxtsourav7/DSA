@@ -1,7 +1,12 @@
+/*
+*	author 	: nxtsourav7
+*	problem : Bubble Sort
+*	created : 2023/10/05 09:48:46
+*/
 #include<bits/stdc++.h>
 using namespace std;
 
-//Driver Code !!
+
 void Bubble_Sort(int array[] , int n) {
     for(int i=0 ; i<n-1 ; i++) {
 
@@ -26,7 +31,7 @@ void print(int array[] , int n) {
     cout << '\n';
 }
 
-
+//Driver Code !!
 int main() {
     int n;cin >> n;
 
