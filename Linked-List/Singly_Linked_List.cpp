@@ -15,13 +15,13 @@ struct node {
 };
 
 
-class Linked_List {
+class Singly_Linked_List {
     private:
     node* head;
 
     public:
     // contructor
-    Linked_List() : head(nullptr) {};
+    Singly_Linked_List() : head(nullptr) {};
 
     // insert
     void insert_at_front(int new_value) {
@@ -92,9 +92,9 @@ class Linked_List {
 
 int32_t main() {
     /**
-     * make a object of Linked_List class 
-     * a object works as a linked list 
-     * in Linked_List class has 5 method
+     * make a object of Singly_Linked_List class 
+     * a object works as a singly linked list 
+     * in Singly_Linked_List class has 5 method
      *      1.insert_at_front
      *      2.insert_at_back
      *      3.delete_from_front
