@@ -111,7 +111,9 @@ int32_t main() {
         // here got even number !!
         else {
             if(flag) {
+                // doesn't effect on empty output stack
                 if(output.top() & 1) input.pop();
+                // remove from output stack util contiguous set stop
                 else {
                     input.pop();
                     output.pop();
