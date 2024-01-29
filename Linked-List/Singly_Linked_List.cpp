@@ -6,18 +6,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-struct node {
+struct Node {
     int data;
-    node* next;
+    Node* next;
 
     // constructor
-    node(int new_value) : data(new_value), next(nullptr) {};
+    Node(int new_value) : data(new_value), next(nullptr) {};
 };
 
 
 class Singly_Linked_List {
     private:
-    node* head;
+    Node* head;
 
     public:
     // contructor
@@ -25,8 +25,8 @@ class Singly_Linked_List {
 
     // insert
     void insert_at_front(int new_value) {
-        // make new node with new value
-        node* new_node = new node(new_value);
+        // make new Node with new value
+        Node* new_node = new Node(new_value);
 
         // when it's a empty linked list
         if(head==nullptr) {
@@ -39,15 +39,15 @@ class Singly_Linked_List {
         head = new_node;
     }
     void insert_at_back(int new_value) {
-        node* new_node = new node(new_value);
+        Node* new_node = new Node(new_value);
 
         if(head==nullptr) {
             head = new_node;
             return;
         }
 
-        // travese to last node and add there
-        node* temp = head;
+        // travese to last Node and add there
+        Node* temp = head;
         while(temp->next!=nullptr) {
             temp = temp->next;
         }
@@ -56,7 +56,9 @@ class Singly_Linked_List {
 
     // delete
     void delete_from_front() {
-        node* temp = head;
+        if(head==nullptr) return;
+        
+        Node* temp = head;
         head = temp->next;
         delete temp;
     }
@@ -64,14 +66,14 @@ class Singly_Linked_List {
         // empty linked list
         if(head==nullptr) return;
         
-        // single node
+        // single Node
         if(head->next==nullptr) {
             delete head;
             return;
         }
 
-        // more than one node   
-        node* temp = head;
+        // more than one Node   
+        Node* temp = head;
         while(temp->next->next!=nullptr) {
             temp = temp->next;
         }
@@ -81,7 +83,7 @@ class Singly_Linked_List {
 
     // print the list
     void print_list() {
-        node* temp = head;
+        Node* temp = head;
         while(temp!=nullptr) {
             cout << temp->data << " ";
             temp = temp->next;
