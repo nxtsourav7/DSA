@@ -85,23 +85,18 @@ class Queue {
 
 class Stack_by_Queue {
     private:
-    Queue q1,q2;
+    Queue q1;
 
     public:
     void push(int new_data) {
-        // move all element first queue to second queue 
-        while(!q1.is_empty()) {
-            q2.enqueue(q1.front());
-            q1.dequeue();
-        }
-
-        // add new data to first queue
+        int k = q1.size();
         q1.enqueue(new_data);
 
-        // move back all element to first queue
-        while(!q2.is_empty()) {
-            q1.enqueue(q2.front());
-            q2.dequeue();
+        // one by one element going to the back
+        for(int i=0; i<k; ++i) {
+            int first = q1.front();
+            q1.dequeue();
+            q1.enqueue(first);
         }
     }
 
