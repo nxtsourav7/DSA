@@ -86,7 +86,7 @@ int32_t main() {
     /**
      * make a object of Queue class 
      * a object works as queue
-     * in Queue class has 5 method
+     * in Queue class has 6 method
      *      1.enqueue() to insert an element into the queue
      *      2.dequeue() to remove an element from the queue
      *      3.front() Returns the first element of the queue.
