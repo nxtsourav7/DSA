@@ -66,7 +66,7 @@ class Stack {
     }
 
     
-    bool is_empty() {
+    bool is_empty() const {
         return (head==nullptr);
     }
 
@@ -84,7 +84,7 @@ int32_t main() {
      *      1.push() to insert an element into the stack
      *      2.pop() to remove an element from the stack
      *      3.top() Returns the top element of the stack.
-     *      4.isEmpty() returns true if stack is empty else false.
+     *      4.is_empty() returns true if stack is empty else false.
      *      5.size() returns the size of stack.
      * all operations time complexity : O(1) {constant};
     **/
@@ -93,5 +93,4 @@ int32_t main() {
 
     
     return 0;
-
 }
