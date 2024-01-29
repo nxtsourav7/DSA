@@ -1,6 +1,9 @@
 #config and debug setup in vs code !
 .vscode
 
+#cph extension folder
+.cph
+
 #input output file
 
 *.txt
