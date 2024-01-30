@@ -21,12 +21,12 @@ struct Node {
 
 
 class Queue {
-    private:
+private:
     Node* head;
     Node* tail;
     int sz = 0;
 
-    public:
+public:
     // constructor
     Queue() : head(nullptr), tail(nullptr) {};
 
@@ -84,10 +84,10 @@ class Queue {
 /**---------------Queue-----------------**/
 
 class Stack_by_Queue {
-    private:
+private:
     Queue q1;
 
-    public:
+public:
     void push(int new_data) {
         int k = q1.size();
         q1.enqueue(new_data);

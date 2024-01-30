@@ -1,7 +1,8 @@
-/**
- * author : nxtsourav7
- * created : 2024-01-29 07:19:42
-**/
+/*
+*	author 	: nxtsourav7
+*	created : 2023/10/05 09:48:46
+*/
+
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -76,21 +77,62 @@ public:
 };
 
 
-int32_t main() {
-    /**
-     * make a object of Stack class 
-     * a object works as stack
-     * in Stack class has 5 method
-     *      1.push() to insert an element into the stack
-     *      2.pop() to remove an element from the stack
-     *      3.top() Returns the top element of the stack.
-     *      4.is_empty() returns true if stack is empty else false.
-     *      5.size() returns the size of stack.
-     * all operations time complexity : O(1) {constant};
-    **/
+/**---------------Stack-----------------**/
 
-   // Do your necessary stuff here !!!
 
+class Queue_by_Stack {
+private:
+    Stack s1,s2;     
+
+public:
+    void enqueue(int new_data) {
+        // move all element to s2
+        while(!s1.is_empty()) {
+            s2.push(s1.top());
+            s1.pop();
+        }
+
+        // insert new data to s1
+        s1.push(new_data);
+
+        // move back all element to s1
+        while(!s2.is_empty()) {
+            s1.push(s2.top());
+            s2.pop();
+        }
+    }
+
+    void dequeue() {
+        if(!s1.is_empty()) s1.pop();
+    }
+
+    int front() {
+        return s1.top();
+    }
+
+    bool is_empty() const {
+        return s1.is_empty();
+    }
+};
+
+
+
+int main() {
+    int n;
+    cin >> n;
+    Queue_by_Stack q1;
+    while(n--) {
+        int x;
+        cin >> x;
+        q1.enqueue(x);
+    }
     
+    // print all element in stack
+    while(!q1.is_empty()) {
+        cout << q1.front() << " ";
+        q1.dequeue();
+    }
+    cout << "\n";
+
     return 0;
 }

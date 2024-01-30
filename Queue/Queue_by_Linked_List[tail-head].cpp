@@ -21,12 +21,12 @@ struct Node {
 
 
 class Queue {
-    private:
+private:
     Node* head;
     Node* tail;
     int sz = 0;
 
-    public:
+public:
     // constructor
     Queue() : head(nullptr), tail(nullptr) {};
 

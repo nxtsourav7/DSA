@@ -17,11 +17,11 @@ struct Node {
 
 
 class Stack {
-    private:
+private:
     Node* head;
     int sz = 0;
 
-    public:
+public:
     // contructor
     Stack() : head(nullptr) {};
 
